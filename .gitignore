@@ -1,0 +1,101 @@
+# .NET
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.mdb
+*.ilk
+*.log
+*.lib
+*.csv
+*.pyc
+*.pyo
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vspx
+.vscode/
+.idea/
+.ReSharper/
+*.vs/
+.vs/
+.TestResults/
+node_modules/
+wwwroot/lib/
+!.editorconfig
+.env
+
+# Build folders
+API/bin/
+API/obj/
+Application/bin/
+Application/obj/
+Core/bin/
+Core/obj/
+Infrastructure/bin/
+Infrastructure/obj/
+
+# Rider and Visual Studio Code
+.vscode/
+.idea/
+.vscode/settings.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+logs/
+*.log
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dotenv
+.env
+.env.*.local
+
+# JetBrains Rider
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf/
+.idea/**/workspace.xml
+.idea/**/projectView.xml
+.idea/**/myApp.iml
+
+# NPM dependencies
+node_modules/
+
+# ASP.NET specific files
+wwwroot/lib/
+# Uncomment if using Razor class libraries
+# **/MyApp.RCL/**/bin/
+# **/MyApp.RCL/**/obj/
+
+# Resharper files
+_ReSharper*
+resharper.xml
+_*.suo
+
+# Others
+*.bak
+*.swp
+*.DS_Store
+*.AppleDouble
+.DS_Store
+*.swp
+*.orig
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
