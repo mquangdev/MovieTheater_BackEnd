@@ -29,11 +29,11 @@ namespace Application.Handler.Auth.Commands.RefreshToken
             var storedRefreshToken = await _refreshTokenDao.checkRefreshToken(userId, request.RefreshToken);
             if (storedRefreshToken == null)
             {
-                throw new ArgumentException("Refresh token invalid");
+                throw new UnauthorizedException("Refresh token invalid");
             }
 
             // Generate new tokens
-            var userRole = "Admin"; // Retrieve role from token if needed
+            var userRole = _userIdentity.Role; // Retrieve role from token if needed
             var newAccessToken = _jwtHelper.GenerateJwtToken(userId.ToString(), userRole);
             var newRefreshToken = _jwtHelper.GenerateRefreshToken();
 

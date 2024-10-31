@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(MovieTheaterContext))]
-    [Migration("20241031072042_init-db")]
+    [Migration("20241031093333_init db")]
     partial class initdb
     {
         /// <inheritdoc />
@@ -21,6 +21,9 @@ namespace Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -105,38 +108,38 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("feb565ad-dfa4-4e38-af1e-3b507db543e7"),
+                            Id = new Guid("65541c65-31f0-4201-9000-3dffc82988da"),
                             Email = "admin@example.com",
                             FullName = "Admin User",
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2119),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7001),
                             Password = "admin123",
-                            RegisterDate = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2105),
-                            RoleId = new Guid("35317719-3b20-49ca-b754-91ff85562eaa"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2122),
+                            RegisterDate = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(6990),
+                            RoleId = new Guid("b0aff688-55b7-406f-97cd-c00c35b1bf95"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7005),
                             Username = "admin"
                         },
                         new
                         {
-                            Id = new Guid("50623fc4-df8e-43dc-8284-a7c54d2cb7a4"),
+                            Id = new Guid("29d3cceb-992e-4ed2-b4d3-44bea80a26ac"),
                             Email = "employee@example.com",
                             FullName = "Employee User",
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2140),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7023),
                             Password = "employee123",
-                            RegisterDate = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2139),
-                            RoleId = new Guid("72611c8e-2e66-4487-959b-5dc518c63bf0"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2140),
+                            RegisterDate = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7023),
+                            RoleId = new Guid("4d5f4397-994b-499d-8c53-26cb09bbe652"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7024),
                             Username = "employee"
                         },
                         new
                         {
-                            Id = new Guid("522b95f8-a95b-456f-9a08-28011718a47b"),
+                            Id = new Guid("bde7c978-94f0-44dc-ae36-9e0a0b52e593"),
                             Email = "member@example.com",
                             FullName = "Member User",
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2143),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7030),
                             Password = "member123",
-                            RegisterDate = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2143),
-                            RoleId = new Guid("dded4e77-fd32-4d63-aede-4161441f583a"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2144),
+                            RegisterDate = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7029),
+                            RoleId = new Guid("71b0500c-0b40-455b-ba72-63d1b06e468b"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7031),
                             Username = "member"
                         });
                 });
@@ -185,19 +188,19 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2226),
+                            Id = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7156),
                             Name = "Room 1",
                             SeatQuantity = 30,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2226)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7157)
                         },
                         new
                         {
-                            Id = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2308),
+                            Id = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7160),
                             Name = "Room 2",
                             SeatQuantity = 25,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2309)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7161)
                         });
                 });
 
@@ -239,10 +242,10 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2c2e5979-7e49-4244-943a-143ffc5f21a6"),
-                            AccountId = new Guid("50623fc4-df8e-43dc-8284-a7c54d2cb7a4"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2170),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2171)
+                            Id = new Guid("b374d263-13ee-43a9-8005-b029d087a985"),
+                            AccountId = new Guid("29d3cceb-992e-4ed2-b4d3-44bea80a26ac"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7070),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7071)
                         });
                 });
 
@@ -312,18 +315,18 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7ddbf4aa-a6fd-44f6-8337-86444f2f7005"),
-                            AccountId = new Guid("522b95f8-a95b-456f-9a08-28011718a47b"),
+                            Id = new Guid("f7d22671-7074-4f4a-b37b-7d295f7b332e"),
+                            AccountId = new Guid("bde7c978-94f0-44dc-ae36-9e0a0b52e593"),
                             AddScore = 10,
-                            BookingDate = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3451),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3482),
+                            BookingDate = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9115),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9149),
                             MovieName = "Action Movie",
                             ScheduleShow = new DateOnly(2024, 11, 1),
                             ScheduleShowTime = "18:00",
                             Seat = "1A, 1B",
                             Status = 1,
                             TotalMoney = 150.00m,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3483),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9150),
                             UseScore = 0
                         });
                 });
@@ -369,11 +372,11 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("bb6755ed-043f-4e71-9e15-e044cda04884"),
-                            AccountId = new Guid("522b95f8-a95b-456f-9a08-28011718a47b"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2196),
+                            Id = new Guid("ce3b0557-af99-4f9c-aa4e-2b1705d45eaa"),
+                            AccountId = new Guid("bde7c978-94f0-44dc-ae36-9e0a0b52e593"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7108),
                             Score = 100,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2197)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7109)
                         });
                 });
 
@@ -450,35 +453,35 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("baa8ac4c-51f3-4fad-bbab-3209c5e484a3"),
+                            Id = new Guid("7bd8ac85-c907-44aa-a961-89bd9a487a2b"),
                             Actor = "Actor 1",
                             Content = "Action packed movie.",
                             Director = "Director 1",
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
-                            FromDate = new DateTime(2024, 9, 30, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2344),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2356),
+                            FromDate = new DateTime(2024, 9, 30, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7208),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7224),
                             LargeImage = "path/to/large/image1.jpg",
                             MovieNameEnglish = "Action Movie",
                             MovieNameVN = "Phim Hành Động",
                             SmallImage = "path/to/small/image1.jpg",
-                            ToDate = new DateTime(2024, 12, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2354),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2357)
+                            ToDate = new DateTime(2024, 12, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7221),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7225)
                         },
                         new
                         {
-                            Id = new Guid("54274e99-c5ae-4700-9cb8-d1d688d7d114"),
+                            Id = new Guid("fd0d681e-708d-4835-9d3c-deb2c8036534"),
                             Actor = "Actor 2",
                             Content = "Romantic movie.",
                             Director = "Director 2",
                             Duration = new TimeSpan(0, 1, 30, 0, 0),
-                            FromDate = new DateTime(2024, 9, 30, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2359),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2361),
+                            FromDate = new DateTime(2024, 9, 30, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7229),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7232),
                             LargeImage = "path/to/large/image2.jpg",
                             MovieNameEnglish = "Romantic Movie",
                             MovieNameVN = "Phim Tình Cảm",
                             SmallImage = "path/to/small/image2.jpg",
-                            ToDate = new DateTime(2024, 11, 30, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2360),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2362)
+                            ToDate = new DateTime(2024, 11, 30, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7230),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7233)
                         });
                 });
 
@@ -524,11 +527,11 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3ae60cee-dfe0-4d80-9d02-13253e53ded5"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3355),
-                            MovieId = new Guid("baa8ac4c-51f3-4fad-bbab-3209c5e484a3"),
-                            ScheduleId = new Guid("de1d7c9e-8928-4356-9450-0ba0428e65b2"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3356)
+                            Id = new Guid("35de3447-8412-42e8-bb2a-e13664fda24d"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8953),
+                            MovieId = new Guid("7bd8ac85-c907-44aa-a961-89bd9a487a2b"),
+                            ScheduleId = new Guid("637e6b26-08e4-49bb-94a9-e41ddae1c096"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8954)
                         });
                 });
 
@@ -574,11 +577,11 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b50075af-7796-4004-b739-ba455289ba15"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3406),
-                            MovieId = new Guid("baa8ac4c-51f3-4fad-bbab-3209c5e484a3"),
-                            ShowDateId = new Guid("77c656f7-b7a2-4396-ab51-c44ce35805a0"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3406)
+                            Id = new Guid("e10e7171-7c19-4b70-b6ad-5347674c7618"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9039),
+                            MovieId = new Guid("7bd8ac85-c907-44aa-a961-89bd9a487a2b"),
+                            ShowDateId = new Guid("27274d94-45e4-4918-bbf1-e718a6705f19"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9040)
                         });
                 });
 
@@ -624,19 +627,19 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a8ec8d2c-09e4-4a78-87aa-7ee61c1a30b3"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3549),
-                            MovieId = new Guid("baa8ac4c-51f3-4fad-bbab-3209c5e484a3"),
-                            TypeId = new Guid("4a404919-1423-452e-aeb0-4f5753fb8ca6"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3550)
+                            Id = new Guid("9a35d5be-4b0c-4341-92e7-d6e118a9ee43"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9265),
+                            MovieId = new Guid("7bd8ac85-c907-44aa-a961-89bd9a487a2b"),
+                            TypeId = new Guid("e4cb01f9-6a1a-4f7d-9a09-83bfaf04f054"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9266)
                         },
                         new
                         {
-                            Id = new Guid("5bec3fa5-6ab9-413e-8292-0cccf9fc36a8"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3552),
-                            MovieId = new Guid("54274e99-c5ae-4700-9cb8-d1d688d7d114"),
-                            TypeId = new Guid("f2ab13ac-c1d9-4b96-9446-0f13cdcc68a0"),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3552)
+                            Id = new Guid("3d7e3ded-5534-4b8a-a3a8-33c0a7ec16f4"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9269),
+                            MovieId = new Guid("fd0d681e-708d-4835-9d3c-deb2c8036534"),
+                            TypeId = new Guid("ef4ef832-43e2-4a0a-8b0a-13746f79b46b"),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9270)
                         });
                 });
 
@@ -692,15 +695,15 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3e6d83f4-6d83-48af-80b6-08a36425a5d5"),
+                            Id = new Guid("95325ae9-a8eb-4139-a5f2-f8e5aa9b8926"),
                             Detail = "Get 20% off for all tickets.",
                             DiscountLevel = 20.0,
-                            EndTime = new DateTime(2024, 11, 30, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3428),
+                            EndTime = new DateTime(2024, 11, 30, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9080),
                             Image = "path/to/promotion/image.jpg",
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3429),
-                            StartTime = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3428),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9081),
+                            StartTime = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9079),
                             Title = "New Year Discount",
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3430)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9082)
                         });
                 });
 
@@ -766,17 +769,17 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("35317719-3b20-49ca-b754-91ff85562eaa"),
+                            Id = new Guid("b0aff688-55b7-406f-97cd-c00c35b1bf95"),
                             RoleName = "Admin"
                         },
                         new
                         {
-                            Id = new Guid("72611c8e-2e66-4487-959b-5dc518c63bf0"),
+                            Id = new Guid("4d5f4397-994b-499d-8c53-26cb09bbe652"),
                             RoleName = "Employee"
                         },
                         new
                         {
-                            Id = new Guid("dded4e77-fd32-4d63-aede-4161441f583a"),
+                            Id = new Guid("71b0500c-0b40-455b-ba72-63d1b06e468b"),
                             RoleName = "Member"
                         });
                 });
@@ -816,115 +819,115 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("de1d7c9e-8928-4356-9450-0ba0428e65b2"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3241),
+                            Id = new Guid("637e6b26-08e4-49bb-94a9-e41ddae1c096"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8773),
                             ScheduleTime = new TimeSpan(0, 8, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3242)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8774)
                         },
                         new
                         {
-                            Id = new Guid("b24ff4f1-bcc5-4978-a2ed-6911113ebe42"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3245),
+                            Id = new Guid("7bc8fb25-ea41-430d-b1b8-e9a572b814b2"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8782),
                             ScheduleTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3246)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8783)
                         },
                         new
                         {
-                            Id = new Guid("22780aaf-6f0e-4f2a-acc9-cff6ac0be736"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3248),
+                            Id = new Guid("d04d0e1d-74c3-47cb-9007-dd0ec5e23f39"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8786),
                             ScheduleTime = new TimeSpan(0, 10, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3249)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8787)
                         },
                         new
                         {
-                            Id = new Guid("f5154370-2cf4-4cf1-9b8c-64320f3834ea"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3253),
+                            Id = new Guid("fd58b513-535d-4e7f-9d2e-be327af614b2"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8794),
                             ScheduleTime = new TimeSpan(0, 11, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3253)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8795)
                         },
                         new
                         {
-                            Id = new Guid("64037c49-bcbd-462c-b7ea-5383527c5d08"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3286),
+                            Id = new Guid("b60122ec-0de2-44d7-afed-381a0c2e2926"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8798),
                             ScheduleTime = new TimeSpan(0, 12, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3286)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8799)
                         },
                         new
                         {
-                            Id = new Guid("7f1b0ed6-4251-4763-9d7c-d52c5e631665"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3290),
+                            Id = new Guid("f613ba7e-efd0-46e5-a06e-228ac16b1e19"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8804),
                             ScheduleTime = new TimeSpan(0, 13, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3290)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8805)
                         },
                         new
                         {
-                            Id = new Guid("f7baaff3-e4a0-4619-80e5-59f79adc9434"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3292),
+                            Id = new Guid("c61f8f88-a3c2-4e70-9dd2-2d3e70404340"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8809),
                             ScheduleTime = new TimeSpan(0, 14, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3293)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8810)
                         },
                         new
                         {
-                            Id = new Guid("47146887-5a4e-4d9d-bc93-72791a02a084"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3295),
+                            Id = new Guid("37627142-c155-4b7c-b26c-f6a77ef51aa4"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8813),
                             ScheduleTime = new TimeSpan(0, 15, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3296)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8814)
                         },
                         new
                         {
-                            Id = new Guid("46a028c0-5c36-4ff5-8f97-50c979d653d2"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3298),
+                            Id = new Guid("485ead18-dd73-4254-a2c7-3d3233059778"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8818),
                             ScheduleTime = new TimeSpan(0, 16, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3298)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8819)
                         },
                         new
                         {
-                            Id = new Guid("e688747a-2636-4d44-a620-3945d9716c6d"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3301),
+                            Id = new Guid("4c3d0d9d-2e27-4646-9007-be4d0ed61b42"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8866),
                             ScheduleTime = new TimeSpan(0, 17, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3302)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8867)
                         },
                         new
                         {
-                            Id = new Guid("ae2bf619-1c63-4261-baff-46c005a68be7"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3304),
+                            Id = new Guid("06a65541-b7f6-4e49-99eb-4a58ec4eb26f"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8870),
                             ScheduleTime = new TimeSpan(0, 18, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3304)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8871)
                         },
                         new
                         {
-                            Id = new Guid("0a3270cc-39d7-4183-b852-8fa7b270c348"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3310),
+                            Id = new Guid("6af452a3-65a7-42d4-87b9-0019ed5d5b85"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8878),
                             ScheduleTime = new TimeSpan(0, 19, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3310)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8879)
                         },
                         new
                         {
-                            Id = new Guid("ec7b2675-c187-4239-a9b3-eeee9ad2aecf"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3312),
+                            Id = new Guid("e30fd83b-bc55-4ab0-90f4-4099853248af"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8883),
                             ScheduleTime = new TimeSpan(0, 20, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3313)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8883)
                         },
                         new
                         {
-                            Id = new Guid("5b88af9f-3b39-4125-baa4-1d20b0da5bb9"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3315),
+                            Id = new Guid("bc2445ae-fbee-43c5-bbd1-113d671816bf"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8887),
                             ScheduleTime = new TimeSpan(0, 21, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3316)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8888)
                         },
                         new
                         {
-                            Id = new Guid("043b1d4c-bd60-4f71-90a8-9d32758c62e4"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3318),
+                            Id = new Guid("d747db86-f107-4ab4-bdb2-e48e9091d978"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8891),
                             ScheduleTime = new TimeSpan(0, 22, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3318)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8892)
                         },
                         new
                         {
-                            Id = new Guid("395adf58-6c89-4d61-a739-35fe5c77cadc"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3320),
+                            Id = new Guid("88256255-83f4-4f04-9dee-5ec026664299"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8896),
                             ScheduleTime = new TimeSpan(0, 23, 0, 0, 0),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3321)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8897)
                         });
                 });
 
@@ -1031,498 +1034,498 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c46ead65-3429-4423-b1f2-dd7d54bdb64b"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2390),
+                            Id = new Guid("327de444-0a3e-4992-9c26-2508548cc623"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7387),
                             SeatColumn = "A",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2390)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7388)
                         },
                         new
                         {
-                            Id = new Guid("8080fd9b-ac95-4962-83c9-0e24a63d289a"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2411),
+                            Id = new Guid("82ae1f4d-7419-480e-87c1-b2985947171e"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7424),
                             SeatColumn = "B",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2411)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7425)
                         },
                         new
                         {
-                            Id = new Guid("7db0e80e-fe54-4d74-9f8a-7006206d1174"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2427),
+                            Id = new Guid("af92b48a-3463-4d5d-9d6f-ccf98f22ff58"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7453),
                             SeatColumn = "C",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2427)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7453)
                         },
                         new
                         {
-                            Id = new Guid("175444cd-4975-45b9-80d7-30a8c703697f"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2444),
+                            Id = new Guid("702e5da1-974d-40e3-b1c8-e60a792d6bf0"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7480),
                             SeatColumn = "D",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2445)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7481)
                         },
                         new
                         {
-                            Id = new Guid("b278a59c-0cff-426a-abf5-ee431a6c718b"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2460),
+                            Id = new Guid("94abe95c-f19c-4fd8-ae5c-cccf73bc4677"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7506),
                             SeatColumn = "E",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2460)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7507)
                         },
                         new
                         {
-                            Id = new Guid("70a8d902-eba4-42a2-8ed3-4fc181410ac5"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2479),
+                            Id = new Guid("03c9e985-acbe-499f-9f0c-c924eed5717d"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7535),
                             SeatColumn = "A",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2480)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7536)
                         },
                         new
                         {
-                            Id = new Guid("017d2b50-2e80-47a6-aaaa-cd28d51820d5"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2495),
+                            Id = new Guid("82620787-a096-4d25-b2cb-795cbea5a920"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7562),
                             SeatColumn = "B",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2495)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7563)
                         },
                         new
                         {
-                            Id = new Guid("47c30741-b08f-499c-8a23-07dd3024cb3d"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2511),
+                            Id = new Guid("f200350f-d129-472d-80f3-c2444624688d"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7588),
                             SeatColumn = "C",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2511)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7589)
                         },
                         new
                         {
-                            Id = new Guid("7bfb3ad9-2f57-4804-afec-a9cb9e9abbac"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2528),
+                            Id = new Guid("f98df641-e4b5-46a5-a2d5-3586a87340de"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7617),
                             SeatColumn = "D",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2528)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7618)
                         },
                         new
                         {
-                            Id = new Guid("082a7f2b-8447-4819-8359-1057cf3bd822"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2544),
+                            Id = new Guid("77724c08-c712-4648-bd33-4f76b008e60c"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7645),
                             SeatColumn = "E",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2545)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7645)
                         },
                         new
                         {
-                            Id = new Guid("79259013-cdac-4c68-b542-8bc26a11b09a"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2560),
+                            Id = new Guid("b67ee80e-5063-494c-9371-b6a2720000f7"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7671),
                             SeatColumn = "A",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2560)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7672)
                         },
                         new
                         {
-                            Id = new Guid("b09dc3fb-dc53-4ad0-9684-1a7e6ac4aaf0"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2575),
+                            Id = new Guid("19e594c8-a329-4fb4-9c92-ffbb9250df82"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7697),
                             SeatColumn = "B",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2576)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7698)
                         },
                         new
                         {
-                            Id = new Guid("3a4a63be-d217-45e6-8e57-a0648daa0691"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2591),
+                            Id = new Guid("33d514b8-e68c-4f45-9e8f-b63efebff93c"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7724),
                             SeatColumn = "C",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2591)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7725)
                         },
                         new
                         {
-                            Id = new Guid("60f1d761-0468-4852-9505-009c134a0dfd"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2606),
+                            Id = new Guid("7113e37f-1099-4705-876d-038d223bd966"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7750),
                             SeatColumn = "D",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2607)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7751)
                         },
                         new
                         {
-                            Id = new Guid("2dff6e38-e29a-40e1-8b15-d449bf608908"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2661),
+                            Id = new Guid("563b0278-4ce8-4ce1-b397-f48bec6ea1c1"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7776),
                             SeatColumn = "E",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2662)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7776)
                         },
                         new
                         {
-                            Id = new Guid("27768e1a-4873-4537-bbf7-1652bb1758f5"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2677),
+                            Id = new Guid("a8daeebc-3144-4be1-bb75-89cfb1ab82b4"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7802),
                             SeatColumn = "A",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2677)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7803)
                         },
                         new
                         {
-                            Id = new Guid("f72d79fc-f319-4cd2-afd1-fbcf94d11c86"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2694),
+                            Id = new Guid("8a08171a-666f-4fcf-b9e8-3351d41a240f"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7833),
                             SeatColumn = "B",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2695)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7833)
                         },
                         new
                         {
-                            Id = new Guid("934a81ad-4a2f-4464-b94a-8ee6cd095248"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2711),
+                            Id = new Guid("87fefe30-8938-43f2-b6ce-ff085dd8b258"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7919),
                             SeatColumn = "C",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2711)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7920)
                         },
                         new
                         {
-                            Id = new Guid("42207f7f-2546-4651-8ac6-a86128d0d9df"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2726),
+                            Id = new Guid("73e3cc7c-8a2d-4317-8316-bc51be6bd5f2"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7947),
                             SeatColumn = "D",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2727)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7948)
                         },
                         new
                         {
-                            Id = new Guid("92a5d01d-4e31-47a8-aa18-752d7d1c1f7e"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2742),
+                            Id = new Guid("fc1b2972-7fb3-4867-9116-be0af4801652"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7973),
                             SeatColumn = "E",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2743)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(7974)
                         },
                         new
                         {
-                            Id = new Guid("548fef22-2d96-4fac-9700-b54c21808648"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2757),
+                            Id = new Guid("1cd8a793-184c-4a29-9c1f-5121f0334f9f"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8000),
                             SeatColumn = "A",
                             SeatRow = 5,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2758)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8001)
                         },
                         new
                         {
-                            Id = new Guid("1d2614a4-1352-43cd-b72d-c33c5fcad214"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2773),
+                            Id = new Guid("21c033e1-07e0-4724-a379-3afbb22a7f6b"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8026),
                             SeatColumn = "B",
                             SeatRow = 5,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2773)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8027)
                         },
                         new
                         {
-                            Id = new Guid("3bf21d7a-b104-4002-8e47-e8ed79d4150f"),
-                            CinemaRoomId = new Guid("70e220a4-8297-4361-b9dd-85e1ddf80222"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2789),
+                            Id = new Guid("c750463b-262b-4196-95b6-fb8bc8e0ad72"),
+                            CinemaRoomId = new Guid("7bf4854d-82cc-4348-a585-2fb0dfa998d8"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8052),
                             SeatColumn = "C",
                             SeatRow = 5,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2789)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8053)
                         },
                         new
                         {
-                            Id = new Guid("9c9fcd13-6bcb-42e3-bd35-afd4e9c89f13"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2805),
+                            Id = new Guid("4ac3d10a-28ae-4ce8-9108-7c2934888063"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8080),
                             SeatColumn = "A",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2806)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8081)
                         },
                         new
                         {
-                            Id = new Guid("c63c813c-18ba-4a06-97e7-1acacf348f7f"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2823),
+                            Id = new Guid("582d9ba8-38b0-443b-826a-1d2b69cbd5b4"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8110),
                             SeatColumn = "B",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2824)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8111)
                         },
                         new
                         {
-                            Id = new Guid("3cc47cb2-92a8-4bde-850a-30cbee2309f4"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2839),
+                            Id = new Guid("cd05cd6a-9c41-452f-ad01-402c35af7cda"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8137),
                             SeatColumn = "C",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2840)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8138)
                         },
                         new
                         {
-                            Id = new Guid("72b09d14-d3a5-4e0c-84da-2b73b4b86bb3"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2855),
+                            Id = new Guid("0c8b3a75-045d-4501-ba7c-241d7e2c8811"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8162),
                             SeatColumn = "D",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2855)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8163)
                         },
                         new
                         {
-                            Id = new Guid("6900b9f4-b460-4367-aa41-ec37ddf86c44"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2870),
+                            Id = new Guid("c90a9c36-b622-45d6-bbe0-856dc149f158"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8188),
                             SeatColumn = "E",
                             SeatRow = 1,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2870)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8189)
                         },
                         new
                         {
-                            Id = new Guid("4d8f5fe9-8406-400e-a498-480904479823"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2886),
+                            Id = new Guid("0196a0bc-6eaa-49e4-a6d2-edbcdc1aa9e2"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8214),
                             SeatColumn = "A",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2886)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8215)
                         },
                         new
                         {
-                            Id = new Guid("8a939670-32f8-40cc-8c5e-4b6c4d2f8e8b"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2901),
+                            Id = new Guid("e526ae67-2050-4557-ab59-9b67c5500d15"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8241),
                             SeatColumn = "B",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2902)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8242)
                         },
                         new
                         {
-                            Id = new Guid("78eabd4c-a63c-4d00-9322-d3d20bd812fd"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2916),
+                            Id = new Guid("1a29db88-591e-441e-a1b7-d9dc96eb4487"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8267),
                             SeatColumn = "C",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2917)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8268)
                         },
                         new
                         {
-                            Id = new Guid("8537172d-3102-4248-a3a0-ac225ead9938"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2961),
+                            Id = new Guid("77827c49-8b5f-4b26-b842-9d316b534800"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8293),
                             SeatColumn = "D",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2961)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8294)
                         },
                         new
                         {
-                            Id = new Guid("951e0275-d577-40fc-be5d-d4ff1df45533"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2978),
+                            Id = new Guid("a4c8d816-f5f2-491f-9bca-047b4cf7f9ff"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8322),
                             SeatColumn = "E",
                             SeatRow = 2,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2979)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8323)
                         },
                         new
                         {
-                            Id = new Guid("1ddc39e9-5f76-42c8-b69b-37b2da02ef19"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2995),
+                            Id = new Guid("99237463-861e-4b03-8f03-30dfb9606d6b"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8390),
                             SeatColumn = "A",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(2995)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8391)
                         },
                         new
                         {
-                            Id = new Guid("18de1ef0-5f03-4a6e-b0c9-4839f9e242f7"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3011),
+                            Id = new Guid("b4041371-0f5f-408b-b9ac-153134f1af6e"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8417),
                             SeatColumn = "B",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3011)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8418)
                         },
                         new
                         {
-                            Id = new Guid("a42179cf-8f08-495f-84fc-715c47c21dad"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3026),
+                            Id = new Guid("6bed961a-ed2d-4ccf-ac20-4e63cae87ea2"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8443),
                             SeatColumn = "C",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3026)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8444)
                         },
                         new
                         {
-                            Id = new Guid("efa729fb-1395-45c3-8c26-272fcef97afc"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3041),
+                            Id = new Guid("c32ae876-8545-47c9-b33c-6b08738404c0"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8470),
                             SeatColumn = "D",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3042)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8471)
                         },
                         new
                         {
-                            Id = new Guid("697b862b-050b-4437-81f7-d84e88baf8dc"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3057),
+                            Id = new Guid("50e8dea3-2d35-436b-b9fe-7098fd612dc9"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8496),
                             SeatColumn = "E",
                             SeatRow = 3,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3058)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8497)
                         },
                         new
                         {
-                            Id = new Guid("bdec5278-fcf2-42ac-9352-3a2faec1d57f"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3125),
+                            Id = new Guid("cd8bdf7e-c497-4410-a604-5c80015eb78e"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8580),
                             SeatColumn = "A",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3126)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8581)
                         },
                         new
                         {
-                            Id = new Guid("4c1dcaf3-7400-4a7a-be5e-5aa12bfe0092"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3142),
+                            Id = new Guid("5a334638-113e-40a3-a7b7-7ebac1b612f3"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8607),
                             SeatColumn = "B",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3142)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8608)
                         },
                         new
                         {
-                            Id = new Guid("48b3904a-d1e9-492d-ab74-6107ef430134"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3159),
+                            Id = new Guid("5789bdbc-fc82-405c-a830-8dd674ff4f7a"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8637),
                             SeatColumn = "C",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3160)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8638)
                         },
                         new
                         {
-                            Id = new Guid("8059664c-a0b3-445e-a33e-d9d64517ce14"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3175),
+                            Id = new Guid("b28fca6d-0872-48d7-b06d-443263e90b7a"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8663),
                             SeatColumn = "D",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3176)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8664)
                         },
                         new
                         {
-                            Id = new Guid("b0d5e127-62c8-448f-8d00-87dc0da47131"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3191),
+                            Id = new Guid("4b2fa748-106d-4347-9fbc-85126c94b179"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8689),
                             SeatColumn = "E",
                             SeatRow = 4,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3192)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8690)
                         },
                         new
                         {
-                            Id = new Guid("c033b7f5-d0a5-41b3-8f95-6fb824b8602c"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3207),
+                            Id = new Guid("65148b12-9568-4ccc-8231-7a4cee51b75d"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8715),
                             SeatColumn = "A",
                             SeatRow = 5,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3208)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8716)
                         },
                         new
                         {
-                            Id = new Guid("ef2cfb69-b742-4728-b4b4-051aca5af1bd"),
-                            CinemaRoomId = new Guid("2eacb0d0-46ce-4aa2-9c87-826844bc05e0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3223),
+                            Id = new Guid("c56ea5ba-7025-4ea0-99e0-27316cc46e37"),
+                            CinemaRoomId = new Guid("ad68ca82-150c-4e7b-a726-d3ffe68a5088"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8742),
                             SeatColumn = "B",
                             SeatRow = 5,
                             SeatStatus = 0,
                             SeatType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3223)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8743)
                         });
                 });
 
@@ -1565,11 +1568,11 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("77c656f7-b7a2-4396-ab51-c44ce35805a0"),
+                            Id = new Guid("27274d94-45e4-4918-bbf1-e718a6705f19"),
                             DateName = "Tomorrow",
-                            DateShow = new DateTime(2024, 11, 1, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3380),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3383),
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3384)
+                            DateShow = new DateTime(2024, 11, 1, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8992),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8997),
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(8998)
                         });
                 });
 
@@ -1616,12 +1619,12 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("99f1f44e-59d9-4ce0-ba38-204ef359fcaa"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3504),
-                            InvoiceId = new Guid("7ddbf4aa-a6fd-44f6-8337-86444f2f7005"),
+                            Id = new Guid("f3c86b92-0b9e-4e65-8bbb-7358c4b503d7"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9186),
+                            InvoiceId = new Guid("f7d22671-7074-4f4a-b37b-7d295f7b332e"),
                             Price = 75.00m,
                             TicketType = 0,
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3504)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9187)
                         });
                 });
 
@@ -1661,17 +1664,17 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4a404919-1423-452e-aeb0-4f5753fb8ca6"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3525),
+                            Id = new Guid("e4cb01f9-6a1a-4f7d-9a09-83bfaf04f054"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9224),
                             Name = "Action",
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3526)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9225)
                         },
                         new
                         {
-                            Id = new Guid("f2ab13ac-c1d9-4b96-9446-0f13cdcc68a0"),
-                            InsertedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3527),
+                            Id = new Guid("ef4ef832-43e2-4a0a-8b0a-13746f79b46b"),
+                            InsertedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9227),
                             Name = "Romantic",
-                            UpdatedAt = new DateTime(2024, 10, 31, 14, 20, 41, 248, DateTimeKind.Local).AddTicks(3528)
+                            UpdatedAt = new DateTime(2024, 10, 31, 16, 33, 32, 684, DateTimeKind.Local).AddTicks(9228)
                         });
                 });
 

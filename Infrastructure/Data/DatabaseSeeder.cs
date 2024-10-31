@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using Core.Contants;
+using Core.Entities;
 using Core.Enums;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,12 +7,13 @@ namespace Infrastructure.Data
 {
     public static class DatabaseSeeder
     {
+       
         public static void Seed(ModelBuilder modelBuilder)
         {
             #region Create roles
-            var adminRole = new Role { Id = Guid.NewGuid(), RoleName = "Admin" };
-            var employeeRole = new Role { Id = Guid.NewGuid(), RoleName = "Employee" };
-            var memberRole = new Role { Id = Guid.NewGuid(), RoleName = "Member" };
+            var adminRole = new Role { Id = RoleContants.adminId, RoleName = "Admin" };
+            var employeeRole = new Role { Id = RoleContants.employeeId, RoleName = "Employee" };
+            var memberRole = new Role { Id = RoleContants.memberId, RoleName = "Member" };
 
             modelBuilder.Entity<Role>().HasData(adminRole, employeeRole, memberRole);
             #endregion

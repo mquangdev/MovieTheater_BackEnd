@@ -5,8 +5,8 @@ namespace Infrastructure.DAO.Interfaces
 {
     public interface IGenericDao<T> where T : BaseEntity
     {
-        void Add(T entity);
-        void Update(T entity);
+        T Add(T entity);
+        T Update(T entity);
         void Delete(T entity, bool isHardDelete = false);
 
         void Delete(Expression<Func<T, bool>> condition, bool isHardDelete = false);

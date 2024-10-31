@@ -118,28 +118,23 @@ namespace API
 
             app.MapControllers();
 
-            app.UseExceptionHandler(errorApp =>
-            {
-                errorApp.Run(async context =>
-                {
-                    var exception = context.Features.Get<IExceptionHandlerFeature>()?.Error;
-                    if (exception is UnauthorizedException)
-                    {
-                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                        await context.Response.WriteAsJsonAsync(new { Message = exception.Message });
-                    }
-                    else if (exception is ArgumentException)
-                    {
-                        context.Response.StatusCode = StatusCodes.Status403Forbidden;
-                        await context.Response.WriteAsJsonAsync(new { Message = exception.Message });
-                    }
-                    else
-                    {
-                        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                        await context.Response.WriteAsJsonAsync(new { Message = exception.Message });
-                    }
-                });
-            });
+            //app.UseExceptionHandler(errorApp =>
+            //{
+            //    errorApp.Run(async context =>
+            //    {
+            //        var exception = context.Features.Get<IExceptionHandlerFeature>()?.Error;
+            //        if (exception.InnerException is UnauthorizedException)
+            //        {
+            //            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            //            await context.Response.WriteAsJsonAsync(exception.Message);
+            //        }
+            //        else
+            //        {
+            //            context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            //            await context.Response.WriteAsJsonAsync(exception.Message);
+            //        }
+            //    });
+            //});
 
             app.Run();
         }

@@ -6,6 +6,7 @@ namespace Infrastructure.Data
     public interface IUserIdentity
     {
         public Guid UserId { get; }
+        public string Role { get; }
     }
 
     public class UserIdentity : IUserIdentity
@@ -25,6 +26,15 @@ namespace Infrastructure.Data
             {
                 var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 return userIdClaim != null ? Guid.Parse(userIdClaim) : Guid.Empty;
+            }
+        }
+
+        public string Role
+        {
+            get
+            {
+                var role = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Role)?.Value;
+                return role != null ? role : string.Empty;
             }
         }
     }

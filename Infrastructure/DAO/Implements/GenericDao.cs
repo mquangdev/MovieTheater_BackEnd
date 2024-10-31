@@ -19,12 +19,13 @@ namespace Infrastructure.DAO.Implements
             DbSet = _context.Set<T>();
         }
 
-        public virtual void Add(T entity)
+        public virtual T Add(T entity)
         {
             entity.Id = Guid.NewGuid();
             entity.InsertedById = UserId;
             entity.InsertedAt = DateTime.Now;
             DbSet.Add(entity);
+            return entity;
         }
 
         public virtual void Delete(T entity, bool isHardDelete = false)
@@ -69,11 +70,12 @@ namespace Infrastructure.DAO.Implements
             return GetQuery(x => x.Id == Id);
         }
 
-        public void Update(T entity)
+        public T Update(T entity)
         {
             entity.UpdatedAt = DateTime.Now;
             entity.UpdatedById = UserId;
             _context.Entry(entity).State = EntityState.Modified;
+            return entity;
         }
     }
 }
