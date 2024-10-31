@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.Entities.Base
 {
@@ -13,17 +8,17 @@ namespace Core.Entities.Base
         [Key]
         public Guid Id { get; set; }
 
-        public bool IsDeleted { get; set; }
-        public DateTime InsertedAt { get; set; }
-        public Guid InsertedById { get; set; }
+        public bool? IsDeleted { get; set; }
+        public DateTime? InsertedAt { get; set; }
+        public Guid? InsertedById { get; set; }
 
         [ForeignKey(nameof(InsertedById))]
-        public virtual Account InsertedBy { get; set; }
+        public virtual Account? InsertedBy { get; set; }
 
-        public DateTime UpdatedAt { get; set; }
-        public Guid UpdatedById { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public Guid? UpdatedById { get; set; }
 
         [ForeignKey(nameof(UpdatedById))]
-        public virtual Account UpdatedBy { get; set; }
+        public virtual Account? UpdatedBy { get; set; }
     }
 }

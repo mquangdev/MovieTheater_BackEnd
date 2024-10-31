@@ -11,6 +11,6 @@ namespace Core.Entities
 
         public Guid TypeId { get; set; } // Foreign key for Type
         [ForeignKey(nameof(TypeId))]
-        public virtual Type Type { get; set; } // Navigation property for Type
+        public virtual TypeEntity TypeEntity { get; set; } // Navigation property for Type
     }
 }
